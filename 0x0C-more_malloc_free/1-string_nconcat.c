@@ -22,18 +22,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
-		len_s2 = 0;
+		return ("");
 	}
-	else
+	for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
+		;
+	for (len_s2 = 0; s2[len_s2] != '\0' && s2 != NULL; len_s2++)
+		;
+	if (len_s2 > n)
 	{
 		len_s2 = n;
 	}
-
-	for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
-		;
-	for (len_s2 = 0; s2[len_s2] != '\0' && len_s2 < n; len_s2++)
-		;
 
 	p = malloc(len_s1 + n + 1);
 
