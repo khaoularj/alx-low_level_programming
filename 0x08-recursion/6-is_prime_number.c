@@ -5,17 +5,18 @@
  * Return: 1 if it's a prime number
  */
 int is_prime_number(int n)
-{
-	int x;
-
 	if (n <= 1)
 		return (0);
-	{
-	for (x = 2; x * x <= n; x++)
+/**
+ * the_actual_prime_number - function that calculates if it's a prime number
+ * @n: the input number
+ * @x:parameter
+ * Return: 1 if it's a prime number
+ */
+int the_actual_prime_number(int n, int x)
+{
 	if (n % x == 0)
 		return (0);
-	}
-	return (1);
+	return (the_actual_prime_number(n, x - 1));
 }
-
 
