@@ -4,4 +4,6 @@
  * @s: the string
  * Return:on success return an integer, on failure return 0
  */
-int _atoi(char *s);
+int _atoi(char *s)
+{
+}

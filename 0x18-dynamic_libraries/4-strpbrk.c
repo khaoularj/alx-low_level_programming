@@ -2,4 +2,6 @@
 /**
  * _strpbrk - the  function that searches a string for any of a set of bytes
  */
-char *_strpbrk(char *s, char *accept);
+char *_strpbrk(char *s, char *accept)
+{
+}
